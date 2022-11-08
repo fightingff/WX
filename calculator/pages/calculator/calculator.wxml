@@ -1,0 +1,25 @@
+<!--pages/calculator/calculator.wxml-->
+<template name="calculator">
+  <view class="number">
+    <button class="num" hover-class="btnHover" bindtap="Add" data-num="{{a[0]}}">{{a[0]}}</button>
+    <button class="num" hover-class="btnHover" bindtap="Add" data-num="{{a[1]}}">{{a[1]}}</button>
+    <button class="num" hover-class="btnHover" bindtap="Add" data-num="{{a[2]}}">{{a[2]}}</button>
+    <button class="opt" hover-class="btnHover" bindtap="Add" data-num="{{a[3]}}">{{a[3]}}</button>
+  </view>
+</template>
+<template name="calculator_">
+  <view class="number">
+    <button class="opt" hover-class="btnHover" bindtap="Clear">{{a[0]}}</button>
+    <button class="num" hover-class="btnHover" bindtap="Add" data-num="{{a[1]}}">{{a[1]}}</button>
+    <button class="opt" hover-class="btnHover" bindtap="Add" data-num="{{a[2]}}">{{a[2]}}</button>
+    <button class="get" hover-class="btnHover" bindtap="Solve">{{a[3]}}</button>
+  </view>
+</template>
+<view>
+<input class="result" placeholder="计算结果" value="{{Ans}}"></input>
+</view>
+<template is="calculator" data="{{...A}}"></template>
+<template is="calculator" data="{{...B}}"></template>
+<template is="calculator" data="{{...C}}"></template>
+<template is="calculator_" data="{{...D}}"></template>
+<view class="motto">聪明出于勤奋</view>
