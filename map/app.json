@@ -7,5 +7,10 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "navigationBarTitleText": "map",
     "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你将会被锁定"
+    }
   }
 }
