@@ -26,9 +26,9 @@ Page({
   Updata: function(){
     let that=this;
     this.mapCtx.getCenterLocation({
-      success: function(res){
+      success: res =>{
         console.log(res)
-        that.setData({
+        this.setData({
           longitude: res.longitude,
           latitude: res.latitude,
         })
