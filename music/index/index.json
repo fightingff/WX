@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "itemcard": "../components/itemcard/itemcard"
+  }
+}

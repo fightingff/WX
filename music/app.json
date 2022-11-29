@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "index/index",
+    "broadcast/broadcast",
+    "user/user",
+    "components/broadcastcard/broadcastcard"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0ff",
+    "navigationBarTitleText": "Music",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#f00",
+    "borderStyle": "white",
+    "backgroundColor": "#6f0",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "index/index",
+        "text": "Hot",
+        "iconPath": "images/hot.png",
+        "selectedIconPath": "images/hot.png"
+      },
+      {
+        "pagePath": "broadcast/broadcast",
+        "text": "Broadcast",
+        "iconPath": "images/broadcast.png",
+        "selectedIconPath": "images/broadcast.png"
+      },
+      {
+        "pagePath": "user/user",
+        "text": "User",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user.png"
+      }
+    ]
+  }
+}

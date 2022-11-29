@@ -1,0 +1,4 @@
+<!--components/broadcastcard/broadcastcard.wxml-->
+<view class="card" style="background-image: url('{{item.poster}}')">
+  <text class="title">{{item.title}}</text>
+</view>

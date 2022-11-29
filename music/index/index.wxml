@@ -1,0 +1,9 @@
+<view class="title" style="background-image: url('../images/title_roll.jpg');">
+  <image src="../images/roll.png" class="icon_roll"></image>
+  <view class="title_hot">热歌榜</view>
+</view>
+<view class="divLine"></view>
+<view wx:for="{{current}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <itemcard item="{{item}}"/>
+  <view class="divLine"></view>
+</view>

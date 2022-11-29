@@ -1,0 +1,30 @@
+/* components/broadcastcard/broadcastcard.wxss */
+.card{
+  display: flex;
+  height: 300rpx;
+  width: 300rpx;
+  background-size: 100%;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border: inset 20rpx greenyellow;
+}
+.card::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+.title{
+  font-size: 60rpx;
+  color: white;
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}

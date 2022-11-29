@@ -1,0 +1,40 @@
+.title{
+  display: flex;
+  background-size: 100% 100%;
+  height: 200rpx;
+  position: relative;
+}
+.title::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0,0,0,0.15);
+}
+.icon_roll{
+  display: flex;
+  float: left;
+  height: 200rpx;
+  width: 200rpx;
+  z-index: 1;
+}
+.title_hot{
+  font-family: cursive;
+  font-size: 100rpx;
+  padding-top: 30rpx;
+  font-weight: bold;
+  background: linear-gradient(to right, blue,red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+.divLine{
+  margin-top: 50rpx;
+  background: #0ff;
+  width: 100%;
+  height: 10rpx;
+ }

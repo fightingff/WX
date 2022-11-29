@@ -1,0 +1,29 @@
+/* broadcast/broadcast.wxss */
+.page{
+  width: 750rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-size: 100% 100%;
+}
+.page::after{
+  display: block;
+  clear: both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(f,f,f,1);
+  z-index: 0;
+}
+.content{
+  width: 370rpx;
+  height: 350rpx;
+  margin-top: 15rpx;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+}

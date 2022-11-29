@@ -1,0 +1,24 @@
+/* components/itemcard/itemcard.wxss */
+.music_list1{
+  text-align: center;
+  font-family: fantasy;
+  height: 480rpx;
+  border: outset 20rpx #ff0;
+}
+.artname{
+  display: flex;
+  float: left;
+  font-size: 100rpx;
+  font-weight: bold;
+  background: linear-gradient(to right, #4a56ff,rgb(60, 255, 0) );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.author{
+  display: flex;
+  float:right;
+  width: 400rpx;
+  border-radius: 20rpx;
+  border: inset 10rpx white;
+}
