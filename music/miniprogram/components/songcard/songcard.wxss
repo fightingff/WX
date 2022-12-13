@@ -1,0 +1,29 @@
+/* components/songcard/songcard.wxss */
+.song{
+  height: 150rpx;
+  border: outset 10rpx #0ff;
+  margin-top: 30rpx;
+}
+.poster{
+  display: flex;
+  float: left;
+  height: 150rpx;
+  width: 150rpx;
+  background-size: 100%;
+}
+.content{
+  font-family: cursive;
+  font-size: 50rpx;
+  font-weight: bold;
+  display: inline-flex;
+  margin-top: 50rpx;
+  margin-left: 150rpx;
+}
+.love{
+  display: inline-flex;
+  float: right;
+  height: 80rpx;
+  width: 80rpx;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}

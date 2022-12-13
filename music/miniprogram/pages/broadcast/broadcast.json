@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "broadcastcard": "../../components/broadcastcard/broadcastcard",
+    "musicplayer": "../../components/musicplayer/musicplayer"
+  }
+}

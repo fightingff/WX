@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<view wx:if="{{poster}}" class="cover" style="background-image: url({{poster}});">
+  <text class="author">{{author}}</text>
+</view>
+<view class="blanket"></view>
+<view wx:for="{{dataSource}}">
+  <songcard item="{{item}}" />
+</view>
+

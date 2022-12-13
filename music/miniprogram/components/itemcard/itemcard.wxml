@@ -1,0 +1,9 @@
+<!--components/itemcard/itemcard.wxml-->
+<view  class="music_list1">
+    <view class="song" bindtap="playAudio" data-item="{{item}}">
+      <image  class="poster" src="{{item.poster}}"></image>
+      <text class="content">{{item.name}}</text>
+    </view>
+    <text class="artname">{{item.artname}}</text>
+    <image class="author" mode="widthFix" src="{{item.man}}" bindtap="todetail"></image>
+</view>

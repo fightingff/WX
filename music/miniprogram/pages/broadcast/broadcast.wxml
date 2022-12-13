@@ -1,0 +1,6 @@
+<view class="page"   style="background-image: url('../../images/music.jpg');">
+<view class="content" wx:for="{{list}}">
+  <broadcastcard item="{{item}}"/>
+</view>
+</view>
+<!-- <musicplayer id="player"/> -->

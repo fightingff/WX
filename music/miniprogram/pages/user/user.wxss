@@ -1,0 +1,68 @@
+/* user/user.wxss */
+.input{
+  margin-top: 400rpx;
+  height: 300rpx;
+  text-align: center;
+  font-family: cursive;
+  font-size: 100rpx;
+  border: outset 20rpx #ff0;
+  color: white;
+  background-color: green;
+}
+.nickname{
+  text-align: center;
+  margin-left: 200rpx;
+  font-family: cursive;
+  font-size: 80rpx;
+  font-weight: bold;
+  background: linear-gradient(to right, blue,red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+.usermotto{
+  margin-top: 100rpx;
+  text-align: center;
+  font-family: cursive;
+  font-size: 50rpx;
+  font-weight: bold;
+  background: linear-gradient(to right, yellow,green);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+.song{
+  display: inline-flex;
+  height: 150rpx;
+  width: 100%;
+  border: outset 10rpx white;
+}
+.poster{
+  display: flex;
+  float: left;
+  height: 150rpx;
+  width: 150rpx;
+  background-size: 100%;
+}
+.content{
+  display: inline-flex;
+  font-family: cursive;
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-left: 100rpx;
+}
+.artname{
+  font-size: 40rpx;
+  font-family: cursive;
+}
+.love{
+  display: inline-flex;
+  float: right;
+  height: 80rpx;
+  width: 80rpx;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+}

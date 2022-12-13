@@ -1,0 +1,6 @@
+<!--components/songcard/songcard.wxml-->
+<view class="song" bindtap="playAudio" data-item="{{item}}">
+      <image  class="poster" src="{{item.poster}}"></image>
+      <text class="content">{{item.name}}</text>
+      <image class="love" catchtap="love" src="{{favor?'../../images/flavor1.png':'../../images/flavor0.png'}}"></image> 
+</view>

@@ -1,0 +1,7 @@
+<!--components/musicplayer/musicplayer.wxml-->
+<view class="song" bindtap="playAudio">
+      <image  class="{{item.playState?'poster_play':'poster_pause'}}" src="{{item.musicPic}}"></image>
+      <text class="content">{{item.musicName}}</text>
+      <text class="content_man">\n{{item.artistName}}</text>
+      <image class="icon" src="{{item.playState==1?'../../images/play1.png':'../../images/play0.png'}}"></image>
+</view>

@@ -1,0 +1,26 @@
+/* pages/detail/detail.wxss */
+.cover{
+  height: 450rpx;
+  width: 95%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50rpx;
+  border: outset 20rpx silver;
+  margin-top: 0;
+  position: fixed;
+}
+.blanket{
+  height: 500rpx;
+}
+.author{
+  margin-left: 60rpx;
+  margin-top: 80rpx;
+  font-family: cursive;
+  font-size: 100rpx;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  background: linear-gradient(to left bottom, #4a56ff,rgb(60, 255, 0) );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
