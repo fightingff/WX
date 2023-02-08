@@ -21,6 +21,30 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toss:function(item){
+      const db=wx.cloud.database();
+      db.collection('tasklist').where({
+        'task.member':item.member,
+        'task.money':item.money,
+        'task.name':item.name,
+        'task.location':item.location,
+        'task.date':item.date
+      }).remove();
+    },
+    add:function(e){
+      let item=e.currentTarget.dataset.item
+      this.toss(item);
+      item.member++;
+      const db=wx.cloud.database();
+      db.collection('tasklist').add({
+        data:{
+          task:item
+        }
+      });
+    },
+    get:function(e){
+      let item=e.currentTarget.dataset.item;
+      this.toss(item);
+    }
   }
 })

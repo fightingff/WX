@@ -96,15 +96,21 @@ Page({
                   name:app.globalData.name,
                   date:myDate.toLocaleDateString(),
                   location:app.globalData.destination,
-                  money:that.data.orderCount.money
+                  money:that.data.orderCount.money,
+                  data:wx.getStorageSync('orders'),
+                  member:1
                 }
                 var tmp=wx.getStorageSync('history')||[]
                 tmp.unshift(item);
                 console.log(tmp);
                 wx.setStorageSync('history', tmp);
-                wx.setStorage({
-                  key: "orders",
-                  data: [],
+                wx.setStorage('orders',[]);
+                //发布订单
+                const db=wx.cloud.database();
+                db.collection('tasklist').add({
+                  data:{
+                    task:item
+                  }
                 });
             // 打开扫码功能
             // wx.scanCode({

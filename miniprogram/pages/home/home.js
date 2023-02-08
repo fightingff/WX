@@ -74,8 +74,8 @@ Page({
       itemList: ['东区大食堂','临湖餐厅','麦斯威餐厅','玉湖食堂','银泉食堂'],
       success: function (res) {
         if(!res.cancel) {
-          console.log(res.tapIndex)
-          app.globalData.destination = res.tapIndex
+          let pos= ['东区大食堂','临湖餐厅','麦斯威餐厅','玉湖食堂','银泉食堂'];
+          app.globalData.destination = pos[res.tapIndex]
           console.log(app.globalData.destination)
           wx.navigateTo({
             url: '../index/index',

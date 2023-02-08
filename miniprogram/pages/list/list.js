@@ -1,5 +1,4 @@
 // pages/41/41.js
-import pingdan from "../../data/pingdan.js";
 Page({
 
   /**
@@ -10,13 +9,15 @@ Page({
     kkk:true,
     begin:true,
     morebegin:true,
+    pingdan:[],
     grade_name:'位置',
     grades:[
-      "位置",
-      "大食堂",
-      "麦斯威餐厅",
-      "银泉餐厅",
-      "留学生食堂",
+      '位置',
+      '东区大食堂',
+      '临湖餐厅',
+      '麦斯威餐厅',
+      '玉湖食堂',
+      '银泉食堂'
     ],
     inputValue:"",
     zhong:[]
@@ -211,9 +212,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    const db=wx.cloud.database();
+    var tp=[];
+    db.collection('tasklist').get().then(res=>{
+      res.data.forEach(item => {
+        tp.unshift(item.task);
+      });
+    });
      this.setData({
-       pingdan:pingdan.pingdan,
-       zhong:pingdan.pingdan
+       pingdan:tp,
+       zhong:tp
      })
   },
 
@@ -221,14 +229,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    const db=wx.cloud.database();
+    var tp=[];
+    db.collection('tasklist').get().then(res=>{
+      res.data.forEach(item => {
+        tp.unshift(item.task);
+      });
+    });
+     this.setData({
+       pingdan:tp,
+       zhong:tp
+     })
   },
 
   /**
@@ -249,7 +266,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    const db=wx.cloud.database();
+    var tp=[];
+    db.collection('tasklist').get().then(res=>{
+      res.data.forEach(item => {
+        tp.unshift(item.task);
+      });
+    });
+     this.setData({
+       pingdan:tp,
+       zhong:tp
+     })
   },
 
   /**

@@ -1,13 +1,5 @@
 <!--pages/41/41.wxml-->
 <view>
-  <!-- <view >
-  <image class="cover-box" mode="scaleToFill" src="../images/2.jpg"></image>
- <image class="image2" src="../../images/3.png"></image>
- <text class="a">用户：{{}}</text>
-    <view class="yong">
-  <text>用户信誉：{{}}</text>
-    </view>
-</view> -->
 <view class="yong">
     <text>欢迎来到拼单大厅!</text>
   </view>

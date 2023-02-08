@@ -94,10 +94,7 @@ Page({
       orderCount
     });
     // 将选中的商品存储在本地
-    wx.setStorage({
-      key: "orders",
-      data: subOrders
-    });
+    wx.setStorageSync('orders', subOrders);
   },
   onLoad: function() {
     this.setData({

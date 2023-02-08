@@ -2,10 +2,10 @@
 <view class="list-item"> 
     <image class="picture" src="../../images/yongcan.jpg"></image>
   <view class="container">  
-  <view style="margin-top:2px;float:left;font-size:15px;">{{item.name}}</view>
+  <view style="margin-top:2px;float:left;font-size:15px;">{{item.name}}发布的订单</view>
   <view class="wrapper">
-  <view class="button6">加入</view>
-  <view class="button6">帮带</view>
+  <view class="button6" bindtap="add" data-item="{{item}}">加入</view>
+  <view class="button6" bindtap="get" data-item="{{item}}">帮带</view>
   </view>
     <view class="wrap">
     <view style="padding-bottom:25px"></view>
