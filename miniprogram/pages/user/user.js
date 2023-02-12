@@ -223,6 +223,8 @@ Page({
      zhong:wx.getStorageSync('history')
    })
    if(wx.getUserProfile){
+    if(this.data.userInfo.nickName) getApp().globalData.name=this.data.userInfo.nickName;
+     console.log(this.data.userInfo.nickName);
      this.setData({
        canIUseGetUserProfile:true
      })
@@ -237,6 +239,7 @@ Page({
           userInfo:res.userInfo,
           hasUserInfo:true
         })
+        if(this.data.userInfo.nickName) getApp().globalData.name=this.data.userInfo.nickName;
       }
     })
   },
@@ -262,6 +265,8 @@ Page({
       zhong:wx.getStorageSync('history')
     })
     if(wx.getUserProfile){
+      if(this.data.userInfo.nickName) getApp().globalData.name=this.data.userInfo.nickName;
+      console.log(this.data.userInfo.nickName);
       this.setData({
         canIUseGetUserProfile:true
       })

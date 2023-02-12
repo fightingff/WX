@@ -45,6 +45,16 @@ Component({
     get:function(e){
       let item=e.currentTarget.dataset.item;
       this.toss(item);
+    },
+    display:function(e){
+      console.log(e);
+      wx.setStorage({
+        key:"orders_now",
+        data:e.currentTarget.dataset.item,
+      });
+      wx.navigateTo({
+        url: '../display/display',
+      });
     }
   }
 })

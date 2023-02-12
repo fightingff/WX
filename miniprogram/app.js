@@ -2,7 +2,7 @@
 App({
   globalData:{
     destination:"",
-    name:"Me",
+    name:"我",
   },
   onLaunch: function () {
     if (!wx.cloud) {

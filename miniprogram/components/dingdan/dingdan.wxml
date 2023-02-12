@@ -1,5 +1,5 @@
 <!--components/dingdan.wxml-->
-<view class="list-item"> 
+<view class="list-item" bindtap="display" data-item="{{item.data}}"> 
     <image class="picture" src="../../images/yongcan.jpg"></image>
   <view class="container">  
   <view style="margin-top:2px;">{{item.name}}的订单</view>

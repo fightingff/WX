@@ -6,7 +6,8 @@
     "pages/location/location",
     "pages/index/index",
     "pages/pay/pay",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/display/display"
   ],
   "window": {
     "backgroundColor": "#fff",
