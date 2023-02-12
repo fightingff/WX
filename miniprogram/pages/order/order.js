@@ -45,6 +45,7 @@ Page({
     this.setData({
       orderCount
     });
+    wx.setStorageSync('orders', this.data.items);
   },
   // 点击对应菜单添加按钮
   add: function(event) {
@@ -75,6 +76,7 @@ Page({
     this.setData({
       orderCount
     });
+    wx.setStorageSync('orders', this.data.items);
   },
   // 点击结账按钮
   pay: function() {

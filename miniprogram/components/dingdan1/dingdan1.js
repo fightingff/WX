@@ -41,9 +41,17 @@ Component({
           task:item
         }
       });
+      var tmp=wx.getStorageSync('history')||[]
+      tmp.unshift(item);
+      console.log(tmp);
+      wx.setStorageSync('history', tmp);
     },
     get:function(e){
       let item=e.currentTarget.dataset.item;
+      var tmp=wx.getStorageSync('history')||[]
+      tmp.unshift(item);
+      console.log(tmp);
+      wx.setStorageSync('history', tmp);
       this.toss(item);
     },
     display:function(e){

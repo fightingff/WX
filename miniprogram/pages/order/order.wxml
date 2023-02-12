@@ -4,7 +4,7 @@
     <view class="box">
       <view class="item" wx:for="{{items}}" wx:key="{{id}}">
         <image src="image/item-m.jpg"></image>
-        <text class="title">{{item.title}}</text>
+        <text class="title">{{item.name}}</text>
         <text class="price">￥ {{item.price}} 元</text>
         <view class="opera">
           <text class="btn" bindtap="add" data-id="{{item.id}}" data-index="{{index}}">+</text>

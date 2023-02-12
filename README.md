@@ -10,3 +10,5 @@
 - *后期美化*
 - *照片云存储*
 
+[![Security Status](https://s.murphysec.com/badge/fightingff/WX.svg)](https://www.murphysec.com/p/fightingff/WX)
+
