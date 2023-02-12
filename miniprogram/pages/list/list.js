@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tp:[],
+    Loadingtime1:'',
+    Loadingtime:"",
     select:false,
     kkk:true,
     begin:true,
@@ -23,6 +26,7 @@ Page({
     zhong:[]
   },
   comTime(){
+    
     var kkk=this.data.kkk
     var pingdan=this.data.pingdan
     function sortDownDate(a,b){
@@ -47,6 +51,7 @@ Page({
     }
   },
   comMoney:function(e){
+    
     let pingdan1=this.data.pingdan
     var begin=this.data.begin
     if(begin){
@@ -77,6 +82,8 @@ Page({
     })
  },
  mySelect(e){
+  
+
    console.log(e)
    var name=e.currentTarget.dataset.name
    this.setData({
@@ -84,9 +91,11 @@ Page({
      select:false
    })
    var grade_name=this.data.grade_name
+   
+   this.setData({})
     switch(grade_name){
       
-      case "大食堂":
+      case "东区大食堂":
         var zhong=this.data.zhong
         this.setData({
           pingdan:zhong
@@ -104,9 +113,88 @@ Page({
        this.setData({
          pingdan:list4
        })
-
-      break;
+       var that=this
+       
+       clearInterval(that.data.Loadingtime);
+        that.setData({
+          Loadingtime:null
+        })
+       /* var tip=[]
+        
+        
+        that.setData({
+          Loadingtime1:setInterval(() => {
+           
+            wx.cloud.database().collection('tasklist').get(res=>{
+              console.log(res.data)
+              res.data.map(item => {
+                return{
+                  tip:item.task
+                }
+              });
+        var list5=[];
+        for(var i=0;i<tip.length;i++){
+          var string = tip[i].location;
+          if(string.indexOf(grade_name)>=0){
+            list5.push(tip[i]);
+          }
+        }
       
+       this.setData({
+         pingdan:list5
+       })
+          }, 8000)
+        })
+      })*/
+      break;
+      case "临湖餐厅":
+        var zhong=this.data.zhong
+        this.setData({
+          pingdan:zhong
+        })
+        var list3=this.data.pingdan
+        console.log(list3)
+        var list4=[];
+        for(var i=0;i<list3.length;i++){
+          var string = list3[i].location;
+          if(string.indexOf(grade_name)>=0){
+            list4.push(list3[i]);
+          }
+        }
+      
+       this.setData({
+         pingdan:list4
+       })
+       var that=this
+       clearInterval(that.data.Loadingtime);
+        that.setData({
+          Loadingtime:null
+        })
+      break;
+      case "玉湖食堂":
+        var zhong=this.data.zhong
+        this.setData({
+          pingdan:zhong
+        })
+        var list3=this.data.pingdan
+        console.log(list3)
+        var list4=[];
+        for(var i=0;i<list3.length;i++){
+          var string = list3[i].location;
+          if(string.indexOf(grade_name)>=0){
+            list4.push(list3[i]);
+          }
+        }
+      
+       this.setData({
+         pingdan:list4
+       })
+       var that=this
+       clearInterval(that.data.Loadingtime);
+        that.setData({
+          Loadingtime:null
+        })
+      break;
       case "麦斯威餐厅":
         var zhong=this.data.zhong
         this.setData({
@@ -121,14 +209,18 @@ Page({
             list4.push(list3[i]);
           }
         }
-      
+        
        this.setData({
          pingdan:list4
        })
-
+       var that=this
+       clearInterval(that.data.Loadingtime);
+        that.setData({
+          Loadingtime:null
+        })
       break;
       
-      case "银泉餐厅":
+      case "银泉食堂":
       
         var zhong=this.data.zhong
         this.setData({
@@ -147,6 +239,11 @@ Page({
        this.setData({
          pingdan:list4
        })
+       var that=this
+    clearInterval(that.data.Loadingtime);
+     that.setData({
+       Loadingtime:null
+     })
       break;
       case "留学生食堂":
         var zhong=this.data.zhong
@@ -166,14 +263,49 @@ Page({
        this.setData({
          pingdan:list4
        })
-
+       var that=this
+       clearInterval(that.data.Loadingtime);
+        that.setData({
+          Loadingtime:null
+        })
       break;
       case "位置":
        var zhong=this.data.zhong
        this.setData({
          pingdan:zhong
        })
-    
+       var that=this;
+    var db=wx.cloud.database();
+    var tp=[];
+    that.setData({
+      Loadingtime:setInterval(() => {
+        tp=[];
+        db.collection('tasklist').get().then(res=>{
+          console.log(res.data)
+          res.data.forEach(item=>{
+            tp.unshift(item.task);
+          })
+          console.log(tp)
+        });
+         this.setData({
+           pingdan:tp,
+           zhong:tp
+         })
+        
+      }, 5000)
+
+  })
+    db.collection('tasklist').get().then(res=>{
+      res.data.forEach(item => {
+        tp.unshift(item.task);
+      });
+    });
+     this.setData({
+       pingdan:tp,
+       zhong:tp
+     })
+     console.log(this.data.pingdan)
+      
     }
  },
   inputCom:function(e){
@@ -212,8 +344,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    var that=this;
     const db=wx.cloud.database();
-    var tp=[];
+    var tp=this.data.tp;
+  
+    
     db.collection('tasklist').get().then(res=>{
       res.data.forEach(item => {
         tp.unshift(item.task);
@@ -223,18 +358,21 @@ Page({
        pingdan:tp,
        zhong:tp
      })
+     console.log(this.data.pingdan)
   },
-
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
+    this.onReady
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    var that=this;
     const db=wx.cloud.database();
     var tp=[];
     db.collection('tasklist').get().then(res=>{
@@ -242,41 +380,66 @@ Page({
         tp.unshift(item.task);
       });
     });
-     this.setData({
+    this.setData({
        pingdan:tp,
        zhong:tp
-     })
+     });
+    that.setData({
+      Loadingtime:setInterval(() => {
+        db.collection('tasklist').get().then(res=>{
+          tp=[];
+          res.data.forEach(item => {
+            tp.unshift(item.task);
+          });
+          console.log(tp)
+        });
+         this.setData({
+           pingdan:tp,
+           zhong:tp
+         })
+      }, 5000)
+  })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-
+    var that=this
+    clearInterval(that.data.Loadingtime);
+     that.setData({
+       Loadingtime:null
+     })
+     console.log(that.data.Loadingtime)
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
+  onUnload:function() {
+    
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-    const db=wx.cloud.database();
+    var db=wx.cloud.database();
     var tp=[];
     db.collection('tasklist').get().then(res=>{
+      console.log(res)
       res.data.forEach(item => {
         tp.unshift(item.task);
-      });
+      }); 
+      console.log("刷新成功")
+      this.setData({
+        pingdan:tp,
+        zhong:tp
+      })
+     
     });
-     this.setData({
-       pingdan:tp,
-       zhong:tp
-     })
+     
+     
   },
 
   /**

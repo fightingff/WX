@@ -8,7 +8,8 @@
   <view class="item-content">
     <view class="{{orderCount.num === 0 ? 'box' : 'box active'}}">
       <view class="item" wx:for="{{items}}" wx:key="{{id}}">
-        <image src="image/caiping_2.jpg"></image>
+<!--此处-->
+        <image src="{{item.photo}}"></image>
         <text class="title">{{item.name}}</text>
         <text class="price">￥ {{item.price}} 元</text>
         <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">{{item.active ? '取消' : '添加'}}</text>

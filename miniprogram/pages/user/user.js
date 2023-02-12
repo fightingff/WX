@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    xinyu:100,
+    userInfo:{},
+    hasUserInfo:false,
+    canIUseGetUserProfile:false,
     select:false,
     kkk:true,
     begin:true,
@@ -23,13 +27,14 @@ Page({
   },
   comTime(){
     var kkk=this.data.kkk
+    const ceshi=this.data.ceshi
     function sortDownDate(a,b){
       return Date.parse(a.date)-Date.parse(b.date);
     }
     function sortUpDate(a,b){
       return Date.parse(b.date)-Date.parse(a.date)
     }
-    console.log(ceshi.sort(sortDownDate))
+    
     if(kkk==true){
     this.setData({
       ceshi:ceshi.sort(sortDownDate),
@@ -217,8 +222,30 @@ Page({
      ceshi:wx.getStorageSync('history'),
      zhong:wx.getStorageSync('history')
    })
+   if(wx.getUserProfile){
+     this.setData({
+       canIUseGetUserProfile:true
+     })
+   }
+   
   },
-
+  getUserProfile(e){
+    wx.getUserProfile({
+      desc: '用于完善个人资料',
+      success:(res)=>{
+        this.setData({
+          userInfo:res.userInfo,
+          hasUserInfo:true
+        })
+      }
+    })
+  },
+  getUserInfo(e){
+    this.setData({
+      userInfo:e.detail.userInfo,
+      hasUserInfo:true
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -230,7 +257,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      ceshi:wx.getStorageSync('history'),
+      zhong:wx.getStorageSync('history')
+    })
+    if(wx.getUserProfile){
+      this.setData({
+        canIUseGetUserProfile:true
+      })
+    }
   },
 
   /**
