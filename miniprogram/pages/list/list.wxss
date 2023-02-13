@@ -1,9 +1,15 @@
 /* pages/41/41.wxss */
 page{
-  background-color: rgb(220, 254, 255);
+  background:white;
 }
 .search{
   width:80%;
+}
+.title{
+  height:28px;
+  width:190px;
+  margin-top:2px;
+  margin-left:3px;
 }
 .select_box{
   
@@ -13,14 +19,14 @@ page{
   z-index: 1;
   text-align:center;
   font-size:10px;
-  margin-right: 198px;
+  margin-right: 199px;
 }
 .select_one{
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(255, 255, 255);
   width:100%;
   height:12px;
   position: relative;
-  border:1px solid #666666;
+  
   padding:2px;
   border-radius: 5px;
 }
@@ -37,6 +43,12 @@ page{
   margin-top:5px;
 
 }
+.thiswrapper{
+  background: linear-gradient(#fdc401,white);
+}
+.newwrapper{
+  background-color: #fdc401;
+}
 .a{
   font-size:15px;
   margin-top:5px;
@@ -44,9 +56,10 @@ page{
   
 }
 .search_arr{
-  border:1px solid #d0d0d0;
-  border-radius:10rpx;
+  background-color: white;
+  border-radius:100rpx;
   margin-left:20rpx;
+  
 }
 .search_arr input{
   margin-left:60rpx;
@@ -63,13 +76,14 @@ page{
   width: 15%;
   line-height: 150%;
   text-align: center;
-  border:1px solid #d0d0d0;
-  border-radius: 10rpx;
+  color:#fdc401;
+  border-radius:100rpx;
+  background-color:white;
 }
 .page_row{
   display: flex;
   flex-direction:row;
-  margin-top:15px;
+  margin-top:7px;
 }
 .searchcion{
   margin:10rpx 10rpx 10rpx 10rpx;
@@ -95,8 +109,8 @@ page{
   text-align:center;
   color: black;
   border-radius: 5px;
-  border:1px solid #666666;
-  background-color: rgb(238, 238, 238);
+  
+  background-color: rgb(255, 255, 255);
   padding:2px;
   padding-bottom: 2px;
 }

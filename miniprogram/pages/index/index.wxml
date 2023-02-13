@@ -16,7 +16,7 @@
       </view>
     </view>
   </view>
-  <view class="{{bottomFlag ? 'bottom-bar' : 'bottom-bar hidden'}}">
+  <view class="bottom-bar">
     <view class="count">
         共 <text class="num">{{orderCount.num}} 件</text>     
         合计 <text class="num">{{orderCount.money}} 元</text> 

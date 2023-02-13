@@ -9,6 +9,53 @@ Page({
     latitude:"",
     longitude:"",
     destination:"",
+    markers: [
+      {
+        id:0,
+        iconPath:"../../images/3.1定位.png",
+        latitude:30.308016,
+        longitude:120.084033,
+        width:30,
+        height:30,
+        title:'东区大食堂'
+      },
+      {
+        id:1,
+        iconPath:"../../images/3.1定位.png",
+        latitude:30.303804,
+        longitude:120.085548,
+        width:30,
+        height:30,
+        title:'临湖餐厅'
+      },
+      {
+        id:2,
+        iconPath:"../../images/3.1定位.png",
+        latitude:30.301727,
+        longitude:120.08928,
+        width:30,
+        height:30,
+        title:'麦斯威餐厅',
+      },
+      {
+        id:3,
+        iconPath:"../../images/3.1定位.png",
+        latitude:30.300139,
+        longitude:120.07244,
+        width:30,
+        height:30,
+        title:'玉湖食堂'
+      },
+      {
+        id:4,
+        iconPath:"../../images/3.1定位.png",
+        latitude:30.306311,
+        longitude:120.075402,
+        width:30,
+        height:30,
+        title:'银泉食堂'
+      }
+    ]
   },
 
   /**
@@ -75,7 +122,7 @@ Page({
       success: function (res) {
         if(!res.cancel) {
           let pos= ['东区大食堂','临湖餐厅','麦斯威餐厅','玉湖食堂','银泉食堂'];
-          app.globalData.destination = pos[res.tapIndex];
+          app.globalData.destination = pos[res.tapIndex]
           console.log(app.globalData.destination)
           wx.navigateTo({
             url: '../index/index',

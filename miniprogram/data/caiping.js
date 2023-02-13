@@ -30,6 +30,30 @@ var json=[
     "num":0,
     "active": false,
     "photo":"../../images/caiping_2.jpg"
+  },
+  {
+    "id":"5",
+    "name":"九转大肠",
+    "price":5,
+    "num":0,
+    "active": false,
+    "photo":"../../images/caiping_2.jpg"
+  },
+  {
+    "id":"6",
+    "name":"九转大肠",
+    "price":5,
+    "num":0,
+    "active": false,
+    "photo":"../../images/caiping_2.jpg"
+  },
+  {
+    "id":"7",
+    "name":"九转大肠",
+    "price":5,
+    "num":0,
+    "active": false,
+    "photo":"../../images/caiping_2.jpg"
   }
 ]
 module.exports = {

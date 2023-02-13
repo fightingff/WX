@@ -2,6 +2,13 @@
 .page-section-gap{
   box-sizing: border-box;
   padding: 0 30rpx;
+  margin-top:15px;
+  border-radius: 5px;
+}
+.myMap{
+  margin-left:30px;
+  border:3px solid #fdc401;
+  border-radius:10px;
 }
 .left_button{
   float: left;
@@ -13,4 +20,28 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.banner{
+  width:100%;
+  height:160px;
+}
+.logo1{
+  height:70px;
+  width:70px;
+  margin-left:50px;
+}
+.logo2{
+  height:70px;
+  width:70px;
+  margin-right:50px;
+}
+.text1{
+  height:20px;
+  width:70px;
+  margin-left:50px;
+}
+.text2{
+  height:23px;
+  width:55px;
+  margin-left:90px;
 }

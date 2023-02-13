@@ -1,8 +1,9 @@
 <!--pages/41/41.wxml-->
 <view>
-<view class="yong">
-    <text>欢迎来到拼单大厅!</text>
-  </view>
+<view class="newwrapper">
+<view >
+<image src="../../images/title.png" class="title"></image>
+</view>
 <view class="page_row" bingtap="suo">
   <view class="search">
     <view class="df search_arr">
@@ -12,6 +13,7 @@
   </view>
   <view class="sousuo" bindtap="query">搜索</view>
 </view>
+
 <view class="buttonset">
   <view class="button" bindtap="comTime">按时间排序</view>
   <view class="button" bindtap="bindShowMsg">
@@ -25,7 +27,10 @@
   <view class="button" bindtap="comMoney">按金额排序</view>
  </view>
  <view style="padding-bottom:8px"></view>
+</view>
+<view class="thiswrapper">
   <view wx:for="{{pingdan}}" wx:for-item="item" wx:for-index="index" wx:for-key="index">
    <dingdan1 item="{{item}}"/>
+  </view> 
   </view>
 </view>

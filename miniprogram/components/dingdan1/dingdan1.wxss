@@ -40,7 +40,7 @@ margin-top:5px;
   padding-left:5px;
   border:1px solid #d0d0d0;
   border-radius:5px;
-  background-color: rgb(93, 211, 152);
+  background-color: rgba(238, 173, 88, 0.979);
 }
 .wrapper{
   margin-right:5px;

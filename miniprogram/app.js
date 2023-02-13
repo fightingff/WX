@@ -4,6 +4,14 @@ App({
     destination:"",
     name:"我",
   },
+  onPullDownRefresh: function () {
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    });
+    Console.log('上滑刷新')
+  },
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力');

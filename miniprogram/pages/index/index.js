@@ -13,6 +13,24 @@ Page({
     bottomFlag: false,
     // 提交的订单
     orders: true,
+     //菜单列表
+     menus: [{
+      id: 0,
+      menu: '东区大食堂'
+    },{
+      id: 1,
+      menu: '临湖餐厅'
+    },{
+      id: 2,
+      menu: '麦斯威餐厅'
+    },{
+      id: 3,
+      menu: '玉湖食堂'
+    },{
+      id: 4,
+      menu: '银泉食堂'
+    }
+  ],
     // 商品列表
     items: [],
   },
