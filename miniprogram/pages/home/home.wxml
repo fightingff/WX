@@ -3,10 +3,10 @@
  <view style="margin-top: 25rpx;">
    <view class="left_button">
     
-    <image src="../../images/logo1.png" class="logo1" bindtap="handle_menu"></image>
+    <image src="../../images/logo1.png" class="logo1" catchtap="handle_menu"></image>
    </view>
    <view class="right_button" bindtap="handle_menu" >
-    <image src="../../images/logo2.png" class="logo2" bindtap="select"></image>
+    <image src="../../images/logo2.png" class="logo2" catchtap="select"></image>
    </view>
    
    <!---<view class="left_button">
